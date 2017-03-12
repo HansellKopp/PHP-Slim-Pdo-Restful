@@ -31,7 +31,7 @@ class CompanyMigrate extends AbstractMigration
         $table->addColumn('taxId', 'string', array('limit' => 10))
             ->addColumn('name', 'string', array('limit' => 100))
             ->addColumn('address', 'string', array('limit' => 200))
-            ->addColumn('phoneNumber', 'string', array('limit' => 20))
+            ->addColumn('phoneNumber', 'string', array('limit' => 40))
             ->addColumn('email', 'string', array('limit' => 100))
             ->addTimestamps()
             ->addIndex('taxId', array('unique' => true))
