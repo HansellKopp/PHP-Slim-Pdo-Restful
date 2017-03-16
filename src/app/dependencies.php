@@ -26,3 +26,8 @@ $container['pdo'] = function ($c) {
     $slimPdo = new \Slim\PDO\Database($dsn, $pdo['username'], $pdo['password'], $pdo['options']);
     return $slimPdo;
 };
+
+// Register view engine on container
+$container['view'] = function ($c) {
+    return new \Slim\Views\PhpRenderer('../public/');
+};

@@ -97,7 +97,8 @@ class CompanyController extends BaseController
         // Parse and sanitize received fields
         $data = $request->getParsedBody();
         $insertData = $this->sanitize($data);
-
+        // set id = null for insert
+        $insertData['id'] = null;
         // create Table instance
         $table = new GenericTableCrud(
             $this->getPDO(),

@@ -27,4 +27,11 @@ class BaseController
     {
         return $this->container->get('pdo');
     }
+    /*
+     * get view-render instance
+     */
+    public function getViewRender()
+    {
+        return $this->container->get('view');
+    }
 }
